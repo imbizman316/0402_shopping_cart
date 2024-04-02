@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Shop() {
   const [products, setProducts] = React.useState([]);
@@ -19,13 +20,19 @@ function Shop() {
   }, []);
 
   return (
-    <div>
+    <div className="product-container">
       {products.length > 0 ? (
         products.map((product) => {
           return (
-            <div key={product.id}>
-              <h5>{product.title}</h5>
-            </div>
+            <Link
+              key={product.id}
+              className="product-card"
+              to={`${product.id}`}
+            >
+              <img src={product.image} alt={product.title} />
+              <h4>{product.title}</h4>
+              <h5>${product.price}</h5>
+            </Link>
           );
         })
       ) : (

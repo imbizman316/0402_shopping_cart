@@ -1,5 +1,40 @@
+html {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.product-container {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: auto auto auto;
+}
+
+.product-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 230px;
+  border: 0.5px black solid;
+  padding: 10px;
+}
+
+.product-card img {
+  width: 200px;
+}
+
+.product-detail {
+  display: flex;
+}
+
+.product-detail img {
+  width: 300px;
 }
