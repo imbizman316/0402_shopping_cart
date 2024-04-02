@@ -22,7 +22,7 @@ function ProductDetail() {
 
   React.useEffect(() => {
     getProductDetail();
-  }, [params]);
+  }, []);
 
   return detailData ? (
     <div className="product-detail">
